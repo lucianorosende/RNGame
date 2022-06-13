@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native"
+import theme from "../../constants/theme"
 
 export const styles = StyleSheet.create({
 
@@ -8,13 +9,16 @@ export const styles = StyleSheet.create({
         padding: 10,
     },
     title: {
-        fontSize: 18,
-        color: "#000",
+        fontSize: theme.fontSize.xLarge,
+        color: theme.colors.textColorDark,
     },
     inputContainer: {
         width: 300,
         maxWidth: "80%",
         alignItems: "center",
+        padding: 10,
+        marginTop: 15,
+     
     },
     buttonContainer:{
         flexDirection: "row",
@@ -23,7 +27,14 @@ export const styles = StyleSheet.create({
         margin: 10,
     },
     subTitle:{
-        fontSize: 16,
+        fontSize: theme.fontSize.medium,
         margin: 5,
+        
+    },
+    input:{
+        width: 40,
+        textAlign: "center",
+        fontSize: theme.fontSize.large,
+        height: 50,
     }
 })
