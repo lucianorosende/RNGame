@@ -8,6 +8,6 @@ export const styles = StyleSheet.create({
         borderBottomColor: theme.colors.primary,
         borderBottomWidth: 1,
         color: theme.colors.textColorDark,
-        marginBottom: 15,
+        marginBottom: theme.margin.large,
     }
 })

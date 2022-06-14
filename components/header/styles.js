@@ -13,6 +13,5 @@ export const styles = StyleSheet.create({
     title: {
         color: theme.colors.textColor,
         fontSize: theme.fontSize.xLarge,
-        backgroundColor: theme.colors.secondary
     }
 })

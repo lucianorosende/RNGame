@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: "center",
-        padding: 10,
+        padding: theme.padding.medium,
     },
     title: {
         fontSize: theme.fontSize.xLarge,
@@ -16,19 +16,19 @@ export const styles = StyleSheet.create({
         width: 300,
         maxWidth: "80%",
         alignItems: "center",
-        padding: 10,
-        marginTop: 15,
+        padding: theme.padding.medium,
+        marginTop: theme.margin.large,
      
     },
     buttonContainer:{
         flexDirection: "row",
         width: "100%",
         justifyContent: "space-evenly",
-        margin: 10,
+        margin: theme.margin.medium,
     },
     subTitle:{
         fontSize: theme.fontSize.medium,
-        margin: 5,
+        margin: theme.margin.small,
         
     },
     input:{
