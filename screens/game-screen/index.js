@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import {View, Text, Button} from "react-native";
-import { Card, NumberContainer } from "../../components/index";
+import {View,Button} from "react-native";
+import { Card, CustomText, NumberContainer } from "../../components/index";
 import { styles } from "./styles"
 import theme from "../../constants/theme";
 
@@ -22,7 +22,7 @@ const GameScreen = ({ userOptions }) => {
 
     return(
         <View style={styles.container}>
-            <Text>La suposicion del oponente</Text>
+            <CustomText>La suposicion del oponente</CustomText>
             <NumberContainer>{currentGuess}</NumberContainer>
             <Card style={styles.buttonContainer}>
                 <Button title="Menor" onPress={() => null} color={theme.colors.secondary}></Button>

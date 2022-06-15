@@ -13,5 +13,6 @@ export const styles = StyleSheet.create({
     title: {
         color: theme.colors.textColor,
         fontSize: theme.fontSize.xLarge,
+        fontFamily: "KdamThmorPro",
     }
 })

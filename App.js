@@ -5,21 +5,20 @@ import { styles } from './styles';
 import { Header } from "./components/index"
 import StartGame from "./screens/start-game/index"
 import GameScreen from './screens/game-screen';
+import theme from './constants/theme';
 
 
 export default function App() {
 
   const [userNumber, setUserNumber] = useState();
 
-  // no me reconoce el font
+  const [loaded] = useFonts({
+    "KdamThmorPro": require("./assets/fonts/KdamThmorPro-Regular.ttf"),
+  });
 
-  // const [loaded] = useFonts({
-  //   CONSOLA: require("./assets/fonts/CONSOLA.TTF"),
-  // });
-
-  // if(!loaded){
-  //  return <ActivityIndicator size="large" color={theme.colors.primary} />
-  // }
+  if(!loaded){
+   return <ActivityIndicator size="large" color={theme.colors.primary} />
+  }
 
   const onStartGame = (selectedNumber) => {
     setUserNumber(selectedNumber);

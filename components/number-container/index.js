@@ -1,12 +1,13 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View } from "react-native";
+import {CustomText} from "../index";
 import { styles } from "./styles"
 
 
 const NumberContainer = ({children}) => {
     return(
         <View style={styles.container}>
-            <Text style={styles.number}>{children}</Text>
+            <CustomText style={styles.number}>{children}</CustomText>
         </View>
     )
 }

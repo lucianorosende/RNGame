@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import {View, Text, Button, TouchableWithoutFeedback, Keyboard} from "react-native";
+import {View, Button, TouchableWithoutFeedback, Keyboard} from "react-native";
 import { styles } from "./styles"
-import { Card, Input, NumberContainer } from "../../components";
+import { Card, Input, NumberContainer, CustomText } from "../../components";
 import theme from "../../constants/theme";
 
 const StartGame = ({onStartGame}) => {
@@ -29,7 +29,7 @@ const StartGame = ({onStartGame}) => {
 
     const confirmedOutput = confirmed ? (
         <Card style={styles.inputContainer}>
-            <Text>Has seleccionado</Text>
+            <CustomText>Has seleccionado</CustomText>
             <NumberContainer>{selectedNumber}</NumberContainer>
             <Button title="Empezar Juego" onPress={() => onStartGame(selectedNumber)} color={theme.colors.primary}></Button>
         </Card>
@@ -38,9 +38,9 @@ const StartGame = ({onStartGame}) => {
     return(
         <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
         <View style={styles.container}>
-            <Text style={styles.title}>Comenzar Juego</Text>
+            <CustomText style={styles.title}>Comenzar Juego</CustomText>
             <Card style={styles.inputContainer}>
-                <Text style={styles.subTitle}>Elija el número</Text>
+                <CustomText style={styles.subTitle}>Elija el número</CustomText>
                     <Input 
                     placeholder="11" 
                     keyboardType="numeric" 
