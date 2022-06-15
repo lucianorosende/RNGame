@@ -10,7 +10,6 @@ export const styles = StyleSheet.create({
     },
     title: {
         fontSize: theme.fontSize.xLarge,
-        color: theme.colors.primary,
     },
     inputContainer: {
         width: 300,
@@ -29,7 +28,6 @@ export const styles = StyleSheet.create({
     subTitle:{
         fontSize: theme.fontSize.medium,
         margin: theme.margin.small,
-        color: theme.colors.primary,
     },
     input:{
         width: 40,
