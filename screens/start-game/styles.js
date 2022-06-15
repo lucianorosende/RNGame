@@ -26,7 +26,6 @@ export const styles = StyleSheet.create({
         margin: theme.margin.medium,
     },
     subTitle:{
-        fontSize: theme.fontSize.medium,
         margin: theme.margin.small,
     },
     input:{

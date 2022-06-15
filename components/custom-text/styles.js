@@ -6,6 +6,7 @@ export const styles = StyleSheet.create({
     text: {
         fontFamily: "KdamThmorPro",
         color: theme.colors.primary,
+        fontSize: theme.fontSize.large,
     }
 })
 

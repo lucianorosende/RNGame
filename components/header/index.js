@@ -1,6 +1,6 @@
 import React from "react";
 import { View } from "react-native";
-import {CustomText} from "../index"
+import CustomText from "../custom-text/index"
 import {styles} from "./styles"
 
 const Header = ({title}) => {
