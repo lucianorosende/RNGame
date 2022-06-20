@@ -1,5 +1,7 @@
-import { StyleSheet } from "react-native"
+import { StyleSheet, Dimensions } from "react-native"
 import theme from "../../constants/theme"
+
+const { width, height } = Dimensions.get("window")
 
 export const styles = StyleSheet.create({
 
@@ -12,16 +14,17 @@ export const styles = StyleSheet.create({
         fontSize: theme.fontSize.xLarge,
     },
     inputContainer: {
-        width: 300,
-        maxWidth: "80%",
+        width: width * 0.8,
+        maxWidth: width * 0.95,
+        minWidth: width * 0.7,
         alignItems: "center",
-        padding: theme.padding.medium,
+        padding: width > 500 ? theme.padding.medium : theme.padding.small,
         marginTop: theme.margin.large,
      
     },
     buttonContainer:{
         flexDirection: "row",
-        width: "100%",
+        width: width / 1.6,
         justifyContent: "space-evenly",
         margin: theme.margin.medium,
     },
@@ -29,9 +32,9 @@ export const styles = StyleSheet.create({
         margin: theme.margin.small,
     },
     input:{
-        width: 40,
+        width: width * 0.1,
         textAlign: "center",
         fontSize: theme.fontSize.large,
-        height: 50,
+        height: height * 0.08,
     }
 })

@@ -29,18 +29,18 @@ const StartGame = ({onStartGame}) => {
 
     const confirmedOutput = confirmed ? (
         <Card style={styles.inputContainer}>
-            <CustomText>Has seleccionado</CustomText>
+            <CustomText>You chose</CustomText>
             <NumberContainer>{selectedNumber}</NumberContainer>
-            <Button title="Empezar Juego" onPress={() => onStartGame(selectedNumber)} color={theme.colors.primary}></Button>
+            <Button title="Start Game" onPress={() => onStartGame(selectedNumber)} color={theme.colors.primary}></Button>
         </Card>
     ) : null
 
     return(
         <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
         <View style={styles.container}>
-            <CustomText style={styles.title}>Comenzar Juego</CustomText>
+            <CustomText style={styles.title}>Start Game</CustomText>
             <Card style={styles.inputContainer}>
-                <CustomText style={styles.subTitle}>Elija el número</CustomText>
+                <CustomText style={styles.subTitle}>Choose a number</CustomText>
                     <Input 
                     placeholder="11" 
                     keyboardType="numeric" 
@@ -53,8 +53,8 @@ const StartGame = ({onStartGame}) => {
                     onChangeText={text => onInputChange(text)}
                     />
                 <View style={styles.buttonContainer}>
-                    <Button title="Limpiar" color={theme.colors.secondary} onPress={() => onHandleReset()}></Button>
-                    <Button title="Confirmar" color={theme.colors.secondary} onPress={() => onHandleConfirm()}></Button>
+                    <Button title="Clean" color={theme.colors.secondary} onPress={() => onHandleReset()}></Button>
+                    <Button title="Confirm" color={theme.colors.secondary} onPress={() => onHandleConfirm()}></Button>
                 </View>
             </Card>
             {confirmedOutput}

@@ -1,5 +1,7 @@
-import { StyleSheet } from "react-native"
+import { StyleSheet, Dimensions } from "react-native"
 import theme from "../../constants/theme"
+
+const { width, height } = Dimensions.get("window");
 
 export const styles = StyleSheet.create({
 
@@ -12,8 +14,9 @@ export const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-around",
         marginTop: theme.margin.large,
-        width: 300,
-        maxWidth: "80%",
+        width: width * 0.8,
+        maxWidth: width * 0.95,
+        minWidth: width * 0.7,
         padding: theme.padding.xLarge,
     }
 })
