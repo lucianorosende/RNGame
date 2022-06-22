@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {View, Button, TouchableWithoutFeedback, Keyboard} from "react-native";
+import {View, Button, TouchableWithoutFeedback, Keyboard, KeyboardAvoidingView, Platform, ScrollView} from "react-native";
 import { styles } from "./styles"
 import { Card, Input, NumberContainer, CustomText } from "../../components";
 import theme from "../../constants/theme";
@@ -31,12 +31,14 @@ const StartGame = ({onStartGame}) => {
         <Card style={styles.inputContainer}>
             <CustomText>You chose</CustomText>
             <NumberContainer>{selectedNumber}</NumberContainer>
-            <Button title="Start Game" onPress={() => onStartGame(selectedNumber)} color={theme.colors.primary}></Button>
+            <Button title="Start Game" onPress={() => onStartGame(selectedNumber)} color={theme.colors.secondary}></Button>
         </Card>
     ) : null
 
     return(
+        <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding": "height"} keyboardVerticalOffset={30} style={styles.genericContainer}>
         <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
+        <ScrollView style={styles.genericContainer}>
         <View style={styles.container}>
             <CustomText style={styles.title}>Start Game</CustomText>
             <Card style={styles.inputContainer}>
@@ -59,7 +61,9 @@ const StartGame = ({onStartGame}) => {
             </Card>
             {confirmedOutput}
         </View>
+        </ScrollView>
         </TouchableWithoutFeedback>
+        </KeyboardAvoidingView>
     )
 }
 

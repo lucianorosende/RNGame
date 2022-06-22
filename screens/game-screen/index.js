@@ -27,6 +27,7 @@ const GameScreen = ({ userOptions, onGameOver }) => {
     useEffect(() => {
         if(currentGuess === userOptions) {
             onGameOver(rounds);
+            console.log(rounds)
         }
 
     }, [currentGuess, userOptions, onGameOver])
@@ -46,7 +47,11 @@ const GameScreen = ({ userOptions, onGameOver }) => {
             currentLow.current = currentGuess;
         }
 
-        const nextNumber = generateRandomNumber(currentLow.current, currentHigh.current, currentGuess);
+        const nextNumber = generateRandomNumber(
+            currentLow.current, 
+            currentHigh.current, 
+            currentGuess);
+            
         setCurrentGuess(nextNumber);
         setRounds((actualRounds) => actualRounds + 1);
     }
